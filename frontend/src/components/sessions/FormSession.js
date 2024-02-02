@@ -15,10 +15,16 @@ import Loader from "../layout/Loader.js";
    state = {
      isReady: false,
      age: '',
-     armL: '',
-     height: '',
-     legL: '',
-     chestG: '',
+     armL: '11',
+     height: '11',
+     weight: '12',
+     legL: '2',
+     chestG: '33',
+     date: '',
+     site: '',
+     diagnosis: '',
+     job: '',
+     movement: '',
      features: [{featureTitle: "Hello this is the first feature", featureDescription: "this is the description"}]
    }
      static propTypes = {
@@ -30,18 +36,18 @@ import Loader from "../layout/Loader.js";
 
      onSubmit = (e) => {
        e.preventDefault();
-       if (this.state.age.trim() == "" || this.state.armL.trim() == "" || this.state.legL.trim() == "" || this.state.chestG.trim() == "" || this.state.height.trim() == "" || this.state.weight.trim() == "") {
+       if (this.state.age.trim() == "" || this.state.job.trim() == "" || this.state.diagnosis.trim() == "" || this.state.movement.trim() == "" || this.state.site.trim() == "" || this.state.date.trim() == "") {
         this.props.createMessage({ titleEmpty: "الرجاء تعبئة جميع الحقول" });
       } 
       
-      else if (this.state.age.trim() !== "" && this.state.armL.trim() !== "" && this.state.legL.trim() !== "" && this.state.chestG.trim() !== "" && this.state.height.trim() !== "" && this.state.weight.trim() !== "") {
+      else if (this.state.age.trim() !== "" && this.state.site.trim() !== "" && this.state.diagnosis.trim() !== "" && this.state.movement.trim() !== "" && this.state.job.trim() !== "" && this.state.date.trim() !== "") {
        const set = new FormData();
        set.append('age', this.state.age)
-       set.append('armL', this.state.armL);
-       set.append('legL', this.state.legL);
-       set.append('chestG', this.state.chestG);
-       set.append('height', this.state.height);
-       set.append('weight', this.state.weight);
+       set.append('armL', this.state.age);
+       set.append('legL', this.state.age);
+       set.append('chestG', this.state.age);
+       set.append('height', this.state.age);
+       set.append('weight', this.state.age);
        this.props.actions.addSession(set);
        this.setState({
          title: "",
@@ -61,7 +67,7 @@ import Loader from "../layout/Loader.js";
      
     }
      render() {
-       const {age, height, weight, armL, legL, chestG } = this.state;
+       const {age, height, weight, armL, legL, chestG, date, diagnosis, site, job, movement } = this.state;
 
                       // The loading handler
                       if (this.state.isReady == false) {
@@ -77,7 +83,7 @@ import Loader from "../layout/Loader.js";
         }
        return (
          <div className="container mb-5 mt-5" >
-           <h2 className="text-center py-2" style={{color: "#FFC144", fontWeight: "bold"}}> ❞الجميع لديهم موهبة خاصة ومن واجبنا ان نعثر عليها❝</h2>
+           <h2 className="text-center py-2 azimPurple" style={{ fontWeight: "bold"}}> ❞العزم هو الشرارة التي تضيء الطريق نحو النجاح، والقوة التي تجعل كل تحدي فرصة للتألق.❝</h2>
            <Link to="/">
             <button type="button" className="btn btn-secondary mb-2"> <i class="fas fa-arrow-right"></i> العودة </button>
             </Link>
@@ -86,9 +92,9 @@ import Loader from "../layout/Loader.js";
             
           <div className="col-xl-4 col-lg-4 col-md-4 col-xs-12 col-sm-12">
             <form onSubmit={ this.onSubmit} id="setForm">
-            <h3 className="talentmineBlue">المعلومات الدميوغرافية*</h3>
+            <h3 className="azimPurple">المعلومات الدميوغرافية*</h3>
               <div className="form-group">
-                <h4 className="talentminePurple mt-4 mb-2">العمر:</h4> 
+                <h4 className="azimBlue mt-4 mb-2">العمر:</h4> 
                 <input
                   className="form-control"
                   type="number"
@@ -99,7 +105,7 @@ import Loader from "../layout/Loader.js";
                 />
               </div>
               <div className="form-group mt-2">
-              <h4 className="talentminePurple mt-3 mb-2">الجنس:</h4> 
+              <h4 className="azimBlue mt-3 mb-2">الجنس:</h4> 
               <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
                 <option selected>اختار...</option>
                 <option value="1">ذكر</option>
@@ -107,87 +113,82 @@ import Loader from "../layout/Loader.js";
                 </select>
               </div>
               <hr/>
-              <h3 className="talentmineBlue">القياسات الأنثروبومترية*</h3>
+              <h3 className="azimPurple">التاريخ المرضي*</h3>
               <div className="form-group">
-                <h4 className="talentminePurple mt-4 mb-2">الطول:</h4> 
+                <h4 className="azimBlue mt-4 mb-2">التشخيص:</h4> 
                 <input
                   className="form-control"
-                  type="number"
-                  name="height"
+                  type="text"
+                  name="diagnosis"
                   onChange={this.onChange}
-                  value={height}
-                  placeholder="cm"
+                  value={diagnosis}
+                  placeholder="التشخيص الطبي"
                 />
               </div>
               <div className="form-group">
-                <h4 className="talentminePurple mt-3 mb-2">الوزن:</h4> 
+                <h4 className="azimBlue mt-3 mb-2">تاريخ الاصابة:</h4> 
                 <input
                   className="form-control"
-                  type="number"
-                  name="weight"
+                  type="date"
+                  name="date"
                   onChange={this.onChange}
-                  value={weight}
-                  placeholder="cm"
+                  value={date}
+                  placeholder="التاريخ"
                 />
               </div>
               <div className="form-group">
-                <h4 className="talentminePurple mt-3 mb-2">طول الذراع:</h4> 
+                <h4 className="azimBlue mt-3 mb-2">المنطقة الحركية المتأثرة :</h4> 
                 <input
                   className="form-control"
-                  type="number"
-                  name="armL"
+                  type="text"
+                  name="site"
                   onChange={this.onChange}
-                  value={armL}
-                  placeholder="انظر للتفاصيل"
+                  value={site}
+                  placeholder="طرفي ام دماغي مع التفصيل "
                 />
               </div>
               <div className="form-group">
-                <h4 className="talentminePurple mt-3 mb-2">طول الساق:</h4> 
+                <h4 className="azimBlue mt-3 mb-2"> نوع العمل اليومي:</h4> 
                 <input
                   className="form-control"
-                  type="number"
-                  name="legL"
+                  type="text"
+                  name="job"
                   onChange={this.onChange}
-                  value={legL}
-                  placeholder="انظر للتفاصيل"
+                  value={job}
+                  placeholder="نوع الوظيفة او المهام اليومية"
                 />
               </div>
               <div className="form-group">
-                <h4 className="talentminePurple mt-3 mb-2">محيط الصدر:</h4> 
+                <h4 className="azimBlue mt-3 mb-2">مستوى الحركة الحالي :</h4> 
                 <input
                   className="form-control"
-                  type="number"
-                  name="chestG"
+                  type="text"
+                  name="movement"
                   onChange={this.onChange}
-                  value={chestG}
-                  placeholder="انظر للتفاصيل"
+                  value={movement}
+                  placeholder="صف مستوى الحركة الحالي "
                 />
               </div>
               <hr/>
-              <h3 className="talentmineBlue">معلومات اضافية لنتعرف اكثر</h3>
+              <h3 className="azimPurple">معلومات اضافية لنتعرف اكثر</h3>
               <div className="form-group">
-                <h4 className="talentminePurple mt-4 mb-2">النوع الاجتماعي المفضل للرياضة:</h4> 
+                <h4 className="azimBlue mt-4 mb-2">   هل اخذت تأهيل مكثف سابقا:</h4> 
                 <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                <option selected value="1">لا تفضيل محدد...</option>
-                <option value="3">فردي</option>
-                <option value="2">جماعي</option>
+                <option selected value="1"> ..</option>
+                <option value="3">نعم</option>
+                <option value="2">لا</option>
                 </select>
               </div>
               <div className="form-group">
-                <h4 className="talentminePurple mt-3 mb-2">الرياضة المفضلة:</h4> 
+                <h4 className="azimBlue mt-3 mb-2"> الأمراض المزمنة:</h4> 
                 <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                <option selected>لا تفضيل محدد...</option>
-                <option value="1">كرة القدم</option>
-                <option value="2">ألعاب القوى</option>
-                <option value="3">السباحة</option>
-                <option value="4"> الرماية </option>
-                <option value="5">التنس</option>
-                <option value="6"> كرة السلة </option>
-                <option value="7"> الكاراتيه </option>
-                <option value="8">كرة الطائرة</option>
-                <option value="9"> الجودو </option>
-                <option value="10"> الجمباز </option>
-                <option value="11"> أخرى </option>
+                <option selected>لا توجد...</option>
+                <option value="1">التهاب الأعصاب</option>
+                <option value="2">الضغط </option>
+                <option value="3">السكري النوع الأول</option>
+                <option value="4"> السكري النوع الثاني </option>
+                <option value="5">انسداد الشرايين</option>
+                <option value="6"> أخرى </option>
                 </select>
               </div>
 
@@ -195,12 +196,12 @@ import Loader from "../layout/Loader.js";
               
             </form>
             </div>
-            <div className="col-xl-6 col-lg-6 col-md-6 col-xs-12 col-sm-12"><img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/TalentmineRope.png" class="img-fluid ps-2" /></div>
+            <div className="col-xl-6 col-lg-6 col-md-6 col-xs-12 col-sm-12"><img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/People%20search-bro.png" class="img-fluid ps-2" /></div>
 
             
            
             <div className="form-group d-grid mt-5 pt-4 px-5" form = "setForm">
-              <button type="submit" className="btn btn-lg talentmineBlueBG btn-block mt-5 mb-5" onClick={this.onSubmit}>
+              <button type="submit" className="btn btn-lg azimPurpleBG btn-block mt-5 mb-5" onClick={this.onSubmit}>
               ابدأ التحليل
               </button>
             </div>

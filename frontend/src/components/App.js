@@ -31,7 +31,7 @@ import WelcomePage from "./common/WelcomePage.js";
 import FormSession from "./sessions/FormSession.js";
 import DetailsSession from "./sessions/DetailsSession.js";
 import Soon from "./common/Soon.js";
-
+import AdvanceSoon from "./common/AdvanceSoon.js";
 
 
 
@@ -52,17 +52,17 @@ export default function App() {
               <Header />}> 
               </Route>   
               <div className="content p-0">
+
                 <Switch>
                   <Route  path="/register" component={Register} />
                   <Route  path="/login" component={Login} />
-                  {/* <Route  path="/welcome" component={WelcomePage} /> */}
                   <PrivateRoute exact path="/" component={WelcomePage} />
                   <PrivateRoute exact path="/soon" component={Soon} />
+                  <PrivateRoute exact path="/advance" component={AdvanceSoon} />
                   <PrivateRoute exact path="/session/create" component={(props) => <FormSession {...props} />} />
                   <PrivateRoute exact path="/session/:id" component={(props) => <DetailsSession {...props} />} />
-
-
                 </Switch>
+
               </div> 
               </Fragment>
 

@@ -67,19 +67,19 @@ onChangeCheckbox = event => {
 
     const { email, password, isChecked } = this.state;
     return (
-      <div className="" style={{backgroundImage: `url("https://tawassam.ams3.digitaloceanspaces.com/Test1/media/talentmineLoginBG.png")`, backgroundSize: 'cover', backgroundRepeat: "no-repeat", backgroundPosition: "right top", paddingBottom: "15rem"  }}>                          
+      <div className="" style={{backgroundImage: `url("https://tawassam.ams3.digitaloceanspaces.com/Test1/media/4873152.jpg")`, backgroundSize: 'cover', backgroundRepeat: "no-repeat", backgroundPosition: "right top", paddingBottom: "5rem"  }}>                          
         <hr className="style-five"/>
         <div className="container pt-5">
           <div className="row">
-            <div className="col-md-5 mx-auto pt-5">
+            <div className="col-md-5 text-center mx-auto">
             <a href="#/welcome">
             <img
               src={
-                "https://tawassam.ams3.digitaloceanspaces.com/Test1/media/talentmineLogo.png"
+                "https://tawassam.ams3.digitaloceanspaces.com/Test1/media/AzimLogo.png"
               }
               className="img-fluid"
               alt="Responsive image"
-              style={{ width: "150%" }}
+              style={{ width: "30%" }}
             />
             </a>
             
@@ -88,7 +88,7 @@ onChangeCheckbox = event => {
           <div className="row">
             <div className="col-md-5 mx-auto">
               <form className="mt-5">
-                <h3 className="talentmineBlue mb-3 ">تسجيل الدخول</h3>
+                <h3 className="azimPurple mb-3 ">تسجيل الدخول</h3>
 
                 <div className="input-group form-group mt-4">
                     <span className="input-group-text iconInput ">
@@ -131,7 +131,7 @@ onChangeCheckbox = event => {
                       id="customCheck1"
                     />
                     <label
-                      className="custom-control-label talentmineBlue"
+                      className="custom-control-label azimPurple"
                       htmlFor="customCheck1"
                     >
                       تذكرني
@@ -144,14 +144,15 @@ onChangeCheckbox = event => {
                   value="Login"
                   onClick={this.loginSubmit}
                   className="btn btn-dark btn-lg mt-4"
+                  style={{background: "#717CB5" }}
                 >
                   سجل الدخول
                 </button>
                 </div>
                 <hr/>
-                <div className="talentmineBlue">
+                <div className="azimPurple">
                  ليس لديك حساب؟
-                 <Link to="/register" className="talentmineBlue" style={{fontWeight: "bold", textDecoration: "none"}}>
+                 <Link to="/register" className="azimPurple" style={{fontWeight: "bold", textDecoration: "none"}}>
                   سجل 
                 </Link>
               </div>

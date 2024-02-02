@@ -112,66 +112,287 @@ export class DetailsSession extends Component {
         <img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/star.png" style={{width: "10%"}} class="img-fluid ps-2 text-center" />
         </div>
              <div>
-              <h1 className="talentmineBlue text-center mb-5 mt-3">
-                أهلا بالموهوب  <span style={{color: "#FFC144", fontWeight: "bold"}}>{this.props.session.owner_username}</span>
+              <h1 className="azimPurple text-center mb-5 mt-3">
               </h1>
-              <h2 className="text-center">حللنا قياساتك الجسدية واهتماماتك وبناء عليها استنتجنا ان هذه الرياضة الأنسب لك مبدئيا</h2>
+              <h2 className="text-center azimPurple">حللنا تفاصيل حالتك وبناء على جميع المعطيات هذا افضل جدول تأهيلي مفصل لك</h2>
               </div>
               
               {/* Swimming */}
               {this.props.session.sport == 
                       "swimming" && (
-                        <div className="m-5 justify-content-center pt-5 row">
-                        <img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/swimming.png" style={{width: "30%"}} class="img-fluid ps-2 text-center" />
-                        <h1 className="text-center  my-3" style={{fontSize: "3rem",color: "#FFC144", fontWeight: "bold"}} > السباحة </h1>
-                        </div>
+                        <table class="table">
+                        <thead>
+                          <tr>
+                          <th scope="col">التمرين</th>
+                            <th scope="col">الجلسات</th>
+                            <th scope="col">التكرارات</th>
+                            <th scope="col">الرتم</th>
+                            <th scope="col">الراحة</th>                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Seated wall slide</th>
+                            <td>2</td>
+                            <td>12</td>
+                            <td>3-3</td>
+                            <td>1 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Suspension Y snatch </th>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>1-3</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Single leg Swiss ball hold </th>
+                            <td>1</td>
+                            <td>10</td>
+                            <td>4-4</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Delt bent over lateral reactive  </th>
+                            <td>3</td>
+                            <td>12</td>
+                            <td>3-3</td>
+                            <td>2 min</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     )}
                {/* Basketball */}
                {this.props.session.sport == 
                       "basketball" && (
-                        <div className="m-5 justify-content-center pt-5 row">
-                        <img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/basketball.png" style={{width: "30%"}} class="img-fluid ps-2 text-center" />
-                        <h1 className="text-center  my-3" style={{fontSize: "3rem",color: "#FFC144", fontWeight: "bold"}} > كرة السلة </h1>
-                        </div>
+                        <table class="table">
+                        <thead>
+                          <tr>
+                          <th scope="col">التمرين</th>
+                            <th scope="col">الجلسات</th>
+                            <th scope="col">التكرارات</th>
+                            <th scope="col">الرتم</th>
+                            <th scope="col">الراحة</th>                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Seated wall slide</th>
+                            <td>2</td>
+                            <td>12</td>
+                            <td>3-3</td>
+                            <td>1 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Suspension Y snatch </th>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>1-3</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Single leg Swiss ball hold </th>
+                            <td>1</td>
+                            <td>10</td>
+                            <td>4-4</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Delt bent over lateral reactive  </th>
+                            <td>3</td>
+                            <td>12</td>
+                            <td>3-3</td>
+                            <td>2 min</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     )} 
               {/* Fencing */}
               {this.props.session.sport == 
                       "fencing" && (
-                        <div className="m-5 justify-content-center pt-5 row">
-                        <img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/fencing.png" style={{width: "30%"}} class="img-fluid ps-2 text-center" />
-                        <h1 className="text-center  my-3" style={{fontSize: "3rem",color: "#FFC144", fontWeight: "bold"}} > المبارزة </h1>
-                        </div>
+                        <table class="table">
+                        <thead>
+                          <tr>
+                          <th scope="col">التمرين</th>
+                            <th scope="col">الجلسات</th>
+                            <th scope="col">التكرارات</th>
+                            <th scope="col">الرتم</th>
+                            <th scope="col">الراحة</th>                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Wall push dead bug</th>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>3-3</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">High plank with Swiss ball</th>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Single leg Swiss ball hold    </th>
+                            <td>3</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>1.5</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Elevated box band pallor press rotation </th>
+                            <td>4</td>
+                            <td>12</td>
+                            <td>2-2</td>
+                            <td>1 min</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     )} 
                {/* Judo */}
                {this.props.session.sport == 
                       "judo" && (
-                        <div className="m-5 justify-content-center pt-5 row">
-                        <img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/boxing.png" style={{width: "30%"}} class="img-fluid ps-2 text-center" />
-                        <h1 className="text-center  my-3" style={{fontSize: "3rem",color: "#FFC144", fontWeight: "bold"}} > الجودو </h1>
-                        </div>
+                        <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">التمرين</th>
+                            <th scope="col">الجلسات</th>
+                            <th scope="col">التكرارات</th>
+                            <th scope="col">الرتم</th>
+                            <th scope="col">الراحة</th>                         
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Wall push dead bug</th>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>3-3</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">High plank with Swiss ball</th>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Single leg Swiss ball hold    </th>
+                            <td>3</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>1.5</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Elevated box band pallor press rotation </th>
+                            <td>4</td>
+                            <td>12</td>
+                            <td>2-2</td>
+                            <td>1 min</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     )} 
                {/* Volleyball */}
                {this.props.session.sport == 
                       "volleyball" && (
-                        <div className="m-5 justify-content-center pt-5 row">
-                        <img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/beach-volleyball.png" style={{width: "30%"}} class="img-fluid ps-2 text-center" />
-                        <h1 className="text-center  my-3" style={{fontSize: "3rem",color: "#FFC144", fontWeight: "bold"}} > كرة الطائرة </h1>
-                        </div>
+                        <table class="table">
+                        <thead>
+                          <tr>
+                          <th scope="col">التمرين</th>
+                            <th scope="col">الجلسات</th>
+                            <th scope="col">التكرارات</th>
+                            <th scope="col">الرتم</th>
+                            <th scope="col">الراحة</th>                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Drops DB wrist rotation</th>
+                            <td>3</td>
+                            <td>10</td>
+                            <td>2-2</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Incline Y-W-T raises</th>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>3-3</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Dead hang</th>
+                            <td>2</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Zig zag farmers carries</th>
+                            <td>3</td>
+                            <td>12</td>
+                            <td>-</td>
+                            <td>2 min</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     )} 
                {/* Tennis */}
                {this.props.session.sport == 
                       "tennis" && (
-                        <div className="m-5 justify-content-center pt-5 row">
-                        <img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/tennis.png" style={{width: "30%"}} class="img-fluid ps-2 text-center" />
-                        <h1 className="text-center  my-3" style={{fontSize: "3rem",color: "#FFC144", fontWeight: "bold"}} > التنس </h1>
-                        </div>
+                        <table class="table">
+                        <thead>
+                          <tr>
+                          <th scope="col">التمرين</th>
+                            <th scope="col">الجلسات</th>
+                            <th scope="col">التكرارات</th>
+                            <th scope="col">الرتم</th>
+                            <th scope="col">الراحة</th>                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Drops DB wrist rotation</th>
+                            <td>3</td>
+                            <td>10</td>
+                            <td>2-2</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Incline Y-W-T raises</th>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>3-3</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Dead hang</th>
+                            <td>2</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>2 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Zig zag farmers carries</th>
+                            <td>3</td>
+                            <td>12</td>
+                            <td>-</td>
+                            <td>2 min</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     )} 
                   {/* Confused */}
                {this.props.session.sport == 
                       "DragonRiding" && (
                         <div className="m-5 justify-content-center pt-5 row">
                         <img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/confused.png" style={{width: "30%"}} class="img-fluid ps-2 text-center" />
-                        <h2 className="text-center my-3" style={{color: "#FFC144", fontWeight: "bold"}}> انت مميز لدرجة لم تمكننا من تحديد الرياضة الأنسب, الرجاء مراجعة الفريق</h2>
+                        <h2 className="text-center my-3" style={{color: "#FFC144", fontWeight: "bold"}}> انت مميز لدرجة لم تمكننا من تحديد البرنامج الأنسب, الرجاء مراجعة الفريق</h2>
                         </div>
                     )}                                                                        
                 {/* Confused */}
@@ -185,14 +406,47 @@ export class DetailsSession extends Component {
                         <div className="m-5 justify-content-center pt-5 row">
                         	  <div className="row">
 		<div className="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mx-auto">
-            <img
-              src=
-                "https://tawassam.ams3.digitaloceanspaces.com/Test1/media/talentmineLogo.png"
-              
-              className="img-fluid mt-5 mb-4"
-              alt="Responsive image"
-              style={{width: "150%"}}
-            />
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">التمرين</th>
+      <th scope="col">الجلسات</th>
+      <th scope="col">التكرارات</th>
+      <th scope="col">الرتم</th>
+      <th scope="col">الراحة</th>                         
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Wall push dead bug</th>
+      <td>2</td>
+      <td>10</td>
+      <td>3-3</td>
+      <td>2 min</td>
+    </tr>
+    <tr>
+      <th scope="row">High plank with Swiss ball</th>
+      <td>2</td>
+      <td>10</td>
+      <td>-</td>
+      <td>2 min</td>
+    </tr>
+    <tr>
+      <th scope="row">Single leg Swiss ball hold</th>
+      <td>3</td>
+      <td>10</td>
+      <td>-</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th scope="row">Elevated box band pallor press rotation </th>
+      <td>4</td>
+      <td>12</td>
+      <td>2-2</td>
+      <td>1 min</td>
+    </tr>
+  </tbody>
+</table>
             </div>
 	  </div>
 	  {/* <div id="loadingProgressG">
@@ -203,10 +457,10 @@ export class DetailsSession extends Component {
                         </div>
                     )} 
                                       
-              <div className="mt-4 pt-3 justify-content-center text-center px-3">
-              <h3 className="text-center mb-5">استثمر موهبتك واصقلها عن طريق اخذ احد المسارات من شركاءنا الذين يستخدمون تالينت-ماين المطور لاقتراحات أكثر ومعلومات أعمق </h3>
+              <div className="mt-5 pt-5 justify-content-center text-center px-3">
+              <h3 className="text-center mb-5">اكمل الخطوة التالية في رحلتك التأهيلية</h3>
           <Link to="/soon">
-            <button type="button" className="btn btn-info btn-lg talentminePurpleBG" style={{padding: "0.7rem 1.5rem", fontSize: "2.3rem", borderRadius: "2.9rem", borderColor:"#523b93"}}>اصقل موهبتك</button>
+            <button type="button" className="btn btn-info btn-lg azimPurpleBG" style={{padding: "0.7rem 1.5rem", fontSize: "2.3rem", borderRadius: "2.9rem", borderColor:"#523b93"}}>بدء التمارين ومتابعة الخطة</button>
             </Link>
           </div>
         </div>

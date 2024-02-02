@@ -9,8 +9,8 @@ export class Footer extends Component {
             <div className="d-block mx-auto pt-1">
               <div className="my-2 flex-center">
                 <a
-                  className="tw-ic talentminePurple pl-4 ms-2"
-                  href="https://twitter.com/Talentmine"
+                  className="tw-ic azimPurple pl-4 ms-2"
+                  href="https://twitter.com/Azim"
                 >
                   <i className="fab fa-twitter  me-md-5 me-3 fa-2x">
                     {" "}
@@ -18,8 +18,8 @@ export class Footer extends Component {
                 </a>
 
                 <a
-                  className="tw-ic talentminePurple"
-                  href="mailto:talentmine@gmail.com"
+                  className="tw-ic azimPurple"
+                  href="mailto:azim@gmail.com"
                 >
                   <i className="far fa-envelope me-md-5 me-3 fa-2x">
                     {" "}
@@ -30,11 +30,11 @@ export class Footer extends Component {
           </div>
           
 
-          <div className="footer-copyright text-center py-3 talentminePurple text-decoration-none" style={{fontWeight: "bold"}}>
+          <div className="footer-copyright text-center py-3 azimPurple text-decoration-none" style={{fontWeight: "bold"}}>
           2022 Copyright:©
-          <s href="mailto:tawassam.med@gmail.com"className="text-decoration-none talentmineBlue" style={{fontWeight: "bold"}}>
+          <s href="mailto:azim@gmail.com"className="text-decoration-none azimBlue" style={{fontWeight: "bold"}}>
             {" "}
-            Talentmine
+            Azim
           </s>
         </div>
         </div>

@@ -53,14 +53,13 @@ export class WelcomePage extends Component {
       >                          
         <div className="row justify-content-center">
           <div className="col-xl-5   col-lg-5 col-md-12 col-xs-12 col-sm-12 mb-5 pe-5 p-2" style={{marginTop: "6rem"}}>
-            <div className="row justify-content-center mb-5"><img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/TalentmineStar.png" style={{width: "30%"}} class="img-fluid ps-2" /></div>
+            <div className="row justify-content-center mb-5"><img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/AzimStars.png" style={{width: "30%"}} class="img-fluid ps-2" /></div>
           
-          <h1 style={{fontSize: "3.0rem"}} className="me-2 p-3 text-center">إكتشف وطور موهبتك الرياضية</h1>
-          <h3 className="me-5 p-3 text-center">في تالينت-ماين نساعدك على إكتشاف في أي رياضة تكمن موهبتك بناء على تحليل قياساتك, خبراتك وتفضيلاتك بإستخدام الذكاء الاصطناعي.</h3>
-
+          <h1 style={{fontSize: "3.0rem"}} className="me-2 p-3 text-center">اجمع عزيمتك وخطط تأهيلك</h1>
+          <h3 className="me-5 p-3 text-center">في عازِم نرشدك الى افضل خطة تأهيلية ونتابعها بشكل دوري عن طريق تحليل المعطيات الطبية بالذكاء الاصطناعي.</h3>
           <div className="mt-4 pt-5 justify-content-center text-center px-3">
           <Link to="/session/create">
-            <button type="button" className="btn btn-info btn-lg talentminePurpleBG" style={{padding: "0.7rem 1.5rem", fontSize: "3rem", borderRadius: "2.9rem", borderColor:"#523b93"}}> نَقّب عن موهبتك</button>
+            <button type="button" className="btn btn-info btn-lg azimPurpleBG" style={{padding: "0.7rem 1.5rem", fontSize: "3rem", borderRadius: "2.9rem", borderColor:"#523b93"}}>   ابدأ التأهيل!</button>
             </Link>
           </div>
 
@@ -68,7 +67,7 @@ export class WelcomePage extends Component {
 
 
         </div>
-        <div className="col-xl-4 col-lg-4 col-md-8 mt-5"><img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/TalentmineBall.png" style={{width: "100%"}} class="img-fluid ps-2 pt-5 mt-5" /></div>
+        <div className="col-xl-4 col-lg-4 col-md-8 mt-5"><img src="https://tawassam.ams3.digitaloceanspaces.com/Test1/media/Phisiotherapy-bro.png" style={{width: "100%"}} class="img-fluid ps-2 pt-5 mt-5" /></div>
         </div>
         <div className="row mb-5" style={{marginTop: "5rem"}}>
         {/* <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 mt-5 pt-5 align-self-center">

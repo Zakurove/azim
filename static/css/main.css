@@ -53,6 +53,25 @@ body {
 	font-weight: bold;
 }
 
+.azimPurple {
+	color: #717CB5 !important;
+}
+/* #4ecdc4 */
+.azimPurpleBG {
+	font-weight: bold;
+	color: #fff;
+	background-color: #717CB5 !important;
+}
+.azimBlue {
+	color: #002060 !important;
+}
+/* #4ecdc4 */
+.azimBlueBG {
+	font-weight: bold;
+	color: #fff;
+	background-color: #002060 !important;
+}
+
 .codepoiesisBlue {
 	color: #10a1b6 !important;
 }
