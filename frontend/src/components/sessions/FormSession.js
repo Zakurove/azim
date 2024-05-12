@@ -36,11 +36,11 @@ import Loader from "../layout/Loader.js";
 
      onSubmit = (e) => {
        e.preventDefault();
-       if (this.state.age.trim() == "" || this.state.job.trim() == "" || this.state.diagnosis.trim() == "" || this.state.movement.trim() == "" || this.state.site.trim() == "" || this.state.date.trim() == "") {
+       if (this.state.age.trim() == "" || this.state.job.trim() == "" || this.state.diagnosis.trim() == "" || this.state.movement.trim() == "" || this.state.site.trim() == "") {
         this.props.createMessage({ titleEmpty: "الرجاء تعبئة جميع الحقول" });
       } 
       
-      else if (this.state.age.trim() !== "" && this.state.site.trim() !== "" && this.state.diagnosis.trim() !== "" && this.state.movement.trim() !== "" && this.state.job.trim() !== "" && this.state.date.trim() !== "") {
+      else if (this.state.age.trim() !== "" && this.state.site.trim() !== "" && this.state.diagnosis.trim() !== "" && this.state.movement.trim() !== "" && this.state.job.trim() !== "") {
        const set = new FormData();
        set.append('age', this.state.age)
        set.append('armL', this.state.age);
